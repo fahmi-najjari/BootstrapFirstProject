@@ -1,16 +1,18 @@
-/* Body reset */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #3f51b5;
     padding: 10px 20px;
     color: #fff;
 }
@@ -20,91 +22,120 @@ body, html {
     color: #fff;
 }
 
-
 .comment-input, .add-comment-button {
-    padding: 5px;
+    padding: 8px;
     font-size: 16px;
     margin-left: 10px;
+    border: none;
+    border-radius: 5px;
 }
+
+.comment-input {
+    width: 200px;
+}
+
+.add-comment-button {
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-comment-button:hover {
+    background-color: #ff3b3b;
+}
+
 
 .container {
     display: flex;
+    margin-top: 20px;
+    gap: 10px;
 }
 
 .comments-section {
-    margin-top: 2em;
     width: 200px;
-    height: 400px; /* Set a fixed height */
+    height: 400px;
     padding: 10px;
-    background-color: #f5f5f5;
-    border-right: 1px solid #ddd;
-    overflow-y: auto; /* Allows scrolling if content exceeds the height */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-y: auto;
 }
-
 
 .comment {
-    padding: 5px;
+    padding: 8px;
     margin-bottom: 5px;
-    background-color: #e0e0e0;
+    background-color: #dfe6e9;
     border-radius: 3px;
+    font-size: 14px;
 }
 
+
 .gamediv {
-    flex-grow: 1; /* Takes up remaining horizontal space */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 90px); /* Adjusted for spacing under navbar */
+    min-height: 100vh; 
     text-align: center;
-    margin-bottom: 2em;
+    margin: 0 auto;
 }
+
 
 .cellDiv {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 10px;
-    padding: 10px;
-    background-color: #666a6d;
+    padding: 20px;
+    background-color: #282c34;
+    border-radius: 10px;
 }
 
 .box {
     width: 100px;
     height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: #f5f5f5;
+    border: 2px solid #3f51b5;
     font-size: 30px;
+    font-weight: bold;
     text-align: center;
+    line-height: 100px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box:hover {
+    background-color: #e3f2fd;
+}
+
+.win {
+    background-color: #81c784; 
+    color: white;
 }
 
 .btn1 {
-    margin-top: 1em;
+    margin-top: 15px;
     padding: 10px 20px;
     font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #161716;
+    color: white;
+    background-color: #ff6b6b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    display:flex;
-    justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .btn1:hover {
-    background-color: #333;
+    background-color: #ff3b3b;
 }
 
+
 .footer {
-    background-color: #333;
+    background-color: #3f51b5;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
-

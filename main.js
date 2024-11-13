@@ -45,17 +45,19 @@ $(document).ready(function() {
         }
 
       
-        currentPlayer = (currentPlayer === "X") ? "O" : "X";
+        if (currentPlayer === "X") {
+            currentPlayer = "O";
+        } else {
+            currentPlayer = "X";
+        }
     });
 
     
     function checkWinner(player) {
         for (var i = 0; i < winNumbers.length; i++) {
             var winCombination = winNumbers[i];
-            if (gameDiv[winCombination[0]] === player &&
-                gameDiv[winCombination[1]] === player &&
-                gameDiv[winCombination[2]] === player) {
-                return true;
+            if (gameDiv[winCombination[0]] === player && gameDiv[winCombination[1]] === player && gameDiv[winCombination[2]] === player) {
+                                              return true;
             }
         }
         return false;
